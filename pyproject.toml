@@ -1,0 +1,27 @@
+[project]
+name = "llm-reliability-lab"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Nils Reck", email = "reck@sipgate.de" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "datasets>=5.1.0",
+    "scikit-learn>=1.9.1",
+    "sentence-transformers>=6.2.0",
+]
+
+[project.scripts]
+llm-reliability-lab = "llm_reliability_lab:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.17.2",
+]
